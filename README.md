@@ -20,7 +20,7 @@ so that Lambda can assume the role.
 
 following permissions policy should be added to the role "available-ip-checker-dest" in each destination account
 
-{
+    {
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -31,14 +31,14 @@ following permissions policy should be added to the role "available-ip-checker-d
             "Resource": "*"
         }
     ]
-}
+    }
 
 ####Following Trust relation should be created in the role "available-ip-checker-dest" in each destination account
 
-{
-  "Version": "2012-10-17",
-  "Statement": [
     {
+    "Version": "2012-10-17",
+    "Statement": [
+     {
       "Effect": "Allow",
       "Principal": {
         "AWS": [
@@ -47,8 +47,8 @@ following permissions policy should be added to the role "available-ip-checker-d
       },
       "Action": "sts:AssumeRole"
     }
-  ]
-}
+    ]
+    }
 
 
 4- Replace SNS Topic ARN to source/central account SNS ARN in which Lambda will be deployed
@@ -61,7 +61,7 @@ topicArn = 'arn:aws:sns:REGION:ACCOUNT NUMBER:NotifyMe'
 
 6- Create a Lambda Role in Source/Central account with atleast below permissions. Name this role "available-ip-checker"
 
-{
+    {
     "Version": "2012-10-17",
     "Statement": [
         {
