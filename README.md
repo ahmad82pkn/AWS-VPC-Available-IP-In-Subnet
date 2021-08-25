@@ -1,6 +1,15 @@
 # Available-IP-In-Subnet
 
-This Code will help monitor number of free ip in each subnet across all accounts/region/vpc and alert if they decrease below specified threshold. ####INSTRUCTIONS##### Please follow steps to update the code as per your account numbers/arn info at specified locations.
+This Code will help monitor number of free ip in each subnet across all accounts/region/vpc and alert if they decrease below specified threshold. 
+
+
+PLEASE NOTE, YOU CAN DEPLOY THIS CODE DIRECTLY FROM AWS CONSOLE -> Search for Available-ip and change region
+
+https://ap-southeast-2.console.aws.amazon.com/lambda/home?region=ap-southeast-2#/create/function
+
+
+
+####INSTRUCTIONS##### Please follow steps to update the code as per your account numbers/arn info at specified locations.
 
 1- In Lambda python code account list accountlist=['1234','5678'] update it with destination account numbers in which you want this lambda to find if any subnet in those accounts have less than 10 free IP. You can include source account number as well in which lambda will be deployed if you want to scan available ip in source account as well For example accountlist=['1234','5678',5555']
 
